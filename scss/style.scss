@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'owl-carousel';
+@import 'layout';
+@import 'color';
+@import 'fonts';
+@import 'screen';
+@import 'animation-plugin';
+@import 'owl-custom';
+
+body{
+    background-color: $white;
+}
+
+span{
+    font-size: 48px;
+    text-align: center;
+    display: inline;
+}
