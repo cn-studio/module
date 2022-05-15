@@ -1,16 +1,16 @@
-//桌機
+//desktop
 @mixin desktop-l{
-	@media (max-width: 1920px) {
+	@media (max-width: 1600px) {
 		@content;
 	}
 }
-
+//notebook
 @mixin desktop-m{
 	@media (max-width: 1440px) {
 		@content;
 	}
 }
-
+//notebook-s
 @mixin desktop-s{
 	@media (max-width: 1280px) {
 		@content;
@@ -18,22 +18,22 @@
 }
 
 
-//ipad-pro
-@mixin ipad-pro{
+//pad-pro
+@mixin pad-l{
 	@media (max-width: 1024px){
 		@content;
 	}
 }
-//ipad
-@mixin ipad{
+//pad
+@mixin pad-m{
 	@media (max-width: 768px){
 		@content;
 	}
 }
 
 
-//手機
-@mixin mobile-l{
+//phone
+@mixin phone-l{
 	@media (max-width: 480px){
 		@content;
 	}
@@ -51,7 +51,7 @@
 	}
 }
 
-@mixin mobile-s{
+@mixin phone-s{
     @media (max-width: 320px){
 		@content;
 	}

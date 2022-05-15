@@ -25,6 +25,20 @@
     padding-top:$pt;
     padding-bottom:$pb;
 }
+//x & y-軸
+@mixin p-a($py, $px) {
+    padding-top: $py;
+    padding-bottom: $py;
+    padding-left: $px;
+    padding-right: $px;
+}
+//上、右、下、左
+@mixin p($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
 
 
 //外間距-----
@@ -36,9 +50,11 @@
 @mixin m-r($right) {
     margin-right: $right;
 }
+//下方
 @mixin m-b($bottom) {
     margin-bottom: $bottom;
 }
+//左方
 @mixin m-l($left) {
     margin-left: $left;
 }
@@ -52,18 +68,23 @@
     margin-top:$mt;
     margin-bottom:$mb;
 }
-
-//定位屬性-----
-//相對定位
-@mixin relative($top, $right, $bottom, $left, $margin) {
-    position: relative;
-    top:$top;
-    left:$left;
-    right:$right;
-    bottom:$bottom;
-    margin:$margin
+//x & y-軸
+@mixin m-a($my, $mx) {
+    margin-top: $my;
+    margin-bottom: $my;
+    margin-left: $mx;
+    margin-right: $mx;
+}
+//上、右、下、左
+@mixin m($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
 }
 
+
+//定位屬性-----
 //絕對定位
 @mixin absolute($top, $right, $bottom, $left, $margin) {
     position: absolute;
@@ -83,6 +104,7 @@
     bottom:$bottom;
     margin: $margin;
 }
+
 
 //排版屬性-----
 //橫式
@@ -105,6 +127,7 @@
     display: flex;
     flex-direction: column-reverse;
 }
+
 
 //動畫屬性-----
 //旋轉

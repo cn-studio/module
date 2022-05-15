@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../scss/fonts.scss"
+        "../scss/animation.scss"
     ],
     "names": [],
-    "file": "fonts.css"
+    "file": "animation.css"
 }
