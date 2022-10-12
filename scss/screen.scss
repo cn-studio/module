@@ -17,7 +17,6 @@
 	}
 }
 
-
 //pad-pro
 @mixin pad-l{
 	@media (max-width: 1024px){
@@ -30,7 +29,6 @@
 		@content;
 	}
 }
-
 
 //phone
 @mixin phone-l{
