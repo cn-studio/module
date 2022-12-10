@@ -2,13 +2,13 @@
 $black:rgb(25, 25, 25);
 
 //深灰色
-$deep-gray: rgb(80, 80, 80);
+$gray-01: rgb(80, 80, 80);
 
 //灰色
-$gray:rgb(150, 150, 150);
+$gray-02:rgb(150, 150, 150);
 
 //亮灰色
-$light-gray: rgb(200, 200, 200);
+$gray-03: rgb(200, 200, 200);
 
 //白色
 $white:rgb(245, 245, 245);
@@ -19,18 +19,13 @@ $white:rgb(245, 245, 245);
 //副色
 //$secondary: ;
 
-//透明色
-@mixin bg-color-a($color, $opacity){
-    background-color: rgba($color, $opacity);
-}
-
 //淡入效果
 @mixin fadein{
     visibility: visible;
     opacity: 1;
 }
 //淡出效果
-@mixin fadeout ($visibility, $opacity){
+@mixin fadeout ($visibility, $opacity:0){
     visibility: $visibility;
     opacity: $opacity;
 }
@@ -47,9 +42,6 @@ $white:rgb(245, 245, 245);
 }
 
 //漸層效果
-@mixin colors($top, $bottom) {
-    background: linear-gradient(
-        $top 0%,
-        $bottom 100%,
-    )
+@mixin linear-gradient($deg, $startColor, $ednColor) {
+    background: linear-gradient($deg, $startColor, $ednColor);
 }

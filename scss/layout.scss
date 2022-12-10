@@ -1,3 +1,14 @@
+//外觀-----
+//尺寸
+@mixin size($size) {
+    height: $size;
+    width: $size;
+}
+//圓角
+@mixin radius($size){
+    border-radius: $size;
+}
+
 //內間距-----
 //上方
 @mixin p-t($top) {
@@ -17,27 +28,8 @@
 }
 //x-軸
 @mixin p-x($pl, $pr) {
-    padding-left:$pl;
-    padding-right:$pr;
-}
-//y-軸
-@mixin p-y($pt, $pb) {
-    padding-top:$pt;
-    padding-bottom:$pb;
-}
-//x & y-軸
-@mixin p-a($py, $px) {
-    padding-top: $py;
-    padding-bottom: $py;
-    padding-left: $px;
-    padding-right: $px;
-}
-//上、右、下、左
-@mixin p($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
+    padding-left: $pl;
+    padding-right: $pr;
 }
 
 
@@ -60,72 +52,48 @@
 }
 //x-軸
 @mixin m-x($ml, $mr) {
-    margin-left:$ml;
-    margin-right:$mr;
+    margin-left: $ml;
+    margin-right: $mr;
 }
 //y-軸
 @mixin m-y($mt, $mb) {
-    margin-top:$mt;
-    margin-bottom:$mb;
-}
-//x & y-軸
-@mixin m-a($my, $mx) {
-    margin-top: $my;
-    margin-bottom: $my;
-    margin-left: $mx;
-    margin-right: $mx;
-}
-//上、右、下、左
-@mixin m($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
+    margin-top: $mt;
+    margin-bottom: $mb;
 }
 
 
 //定位屬性-----
 //絕對定位
-@mixin absolute($top, $right, $bottom, $left, $margin) {
+@mixin absolute($top, $right, $bottom, $left, $margin: auto) {
     position: absolute;
-    top:$top;
-    left:$left;
-    right:$right;
-    bottom:$bottom;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
     margin: $margin;
 }
-
 //固定定位
-@mixin fixed($top, $right, $bottom, $left, $margin) {
+@mixin fixed($top, $right, $bottom, $left, $margin: auto) {
     position: fixed;
-    top:$top;
-    left:$left;
-    right:$right;
-    bottom:$bottom;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
     margin: $margin;
 }
 
 
 //排版屬性-----
 //橫式
-@mixin flex-row {
+@mixin flex-row($dierction: row, $wrap: nowrap) {
     display: flex;
-    flex-direction: row;
-}
-//橫式反轉
-@mixin flex-row-r {
-    display: flex;
-    flex-direction: row-reverse;
+    flex-direction: $dierction;
+    flex-wrap: $wrap;
 }
 //直式
-@mixin flex-col {
+@mixin flex-col($dierction: column) {
     display: flex;
-    flex-direction: column;
-}
-//直式反轉
-@mixin flex-col-r {
-    display: flex;
-    flex-direction: column-reverse;
+    flex-direction: $dierction;
 }
 
 
@@ -134,18 +102,15 @@
 @mixin rotate($degree) {
     transform: rotate($degree)
 }
-
 //縮放
 @mixin scale($n) {
     transform: scale($n)
 }
-
 //傾斜
 @mixin skew($x, $y) {
     transform: skew($x, $y)
 }
-
 //位移
-@mixin  translate($x, $y){
+@mixin translate($x, $y) {
     transform: translate($x, $y);
 }
