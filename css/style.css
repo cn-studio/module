@@ -331,11 +331,4 @@ blockquote, q {
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
-}
-
-div {
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  background-color: rgb(25, 25, 25);
 }/*# sourceMappingURL=style.css.map */
